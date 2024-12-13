@@ -1,7 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 
-const API_KEY = "9a42c96b0b5aba5d934f0b7e876cd810";
+// const API_KEY = "b14288f8865f41268fd3e7cd5e1f17d3";
+const API_KEY = api.env.REACT_APP_API_KEY;
+
 
 const useWeather = () => {
   const [weather, setWeather] = useState(null);

@@ -18,12 +18,7 @@ const InputSection = ({
 }) => {
 	const handleKeyPress = e => {
 		if (e.key === "Enter") fetchWeather(city);
-		setCity("");
 	};
-  const handleButtonClick = (city) => {
-    fetchWeather(city);
-    setCity("");
-  };
 
 	return (
 		<>
@@ -41,7 +36,7 @@ const InputSection = ({
 			<Box sx={{ display: "flex", gap: "10px", marginBottom: "20px" }}>
 				<Button
 					variant='contained'
-					onClick={() => handleButtonClick(city)}
+					onClick={() => fetchWeather(city)}
 					fullWidth>
 					Show Weather
 				</Button>
